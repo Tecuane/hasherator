@@ -1,6 +1,6 @@
 # Hasherator
 
-Golang package that will perform a md5 hash on each file within a directory (and its subdirectories) and append the result to the name of that file. 
+Golang package that will perform a SHA256 hash on each file within a directory (and its subdirectories) and append the result to the name of that file. 
 
 This allows your Go backend to deliver CSS, JS, etc. files to the browser without having to clear the file caching
 every time there is a change. 

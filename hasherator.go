@@ -1,7 +1,7 @@
 package hasherator
 
 import (
-	"crypto/md5"
+	"crypto/sha256"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -83,7 +83,7 @@ func (a *AssetsDir) recursiveHashAndCopy(dirPath, runtimePath string) error {
 			}
 
 			if !noHash {
-				h := md5.Sum(file)
+				h := sha256.Sum256(file)
 				hash = fmt.Sprintf("-%x", string(h[:16]))
 			}
 
